@@ -44,6 +44,24 @@ body {
   border-radius: 2px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.display input {
+  border: none;
+  background: transparent;
+  width: 80px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.close {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.close:hover {
+  opacity: 0.9;
 }
 
 .row {
@@ -56,7 +74,7 @@ body {
   width: 30px;
   height: 30px;
   background-color: #dfe6e9;
-  border: none;
+  border: 1px solid #dfe6e9 ;
   border-radius: 2px;
   margin: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
@@ -67,6 +85,10 @@ body {
 
 .button:hover {
   opacity: 1;
+  border: 1px solid #d1d1d1;
+}
+.button:active {
+  background-color: #d1d1d1;
 }
 
 .green {

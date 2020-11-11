@@ -14,11 +14,11 @@
     <div class="calculator">
         <div class="display">
             <div class="close">
-                <img src="img/close.svg" width="15" />
+                <img src="img/close.svg" width="15" onclick="clear()" />
             </div>
 
             <div class="text">
-                12.255
+                <input name="num" id="num" value="0">
             </div>
         </div>
 
@@ -44,12 +44,14 @@
         </div>
 
         <div class="row">
-            <button class="button">0</button>
+            <button class="button" onclick="clear()">0</button>
             <button class="button">.</button>
             <button class="button green">+</button>
             <button class="button gray">=</button>
         </div>
     </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
