@@ -14,40 +14,40 @@
     <div class="calculator">
         <div class="display">
             <div class="close">
-                <img src="img/close.svg" width="15" onclick="clear()" />
+                <img src="img/close.svg" width="15" onclick="limpar()" />
             </div>
 
             <div class="text">
-                <input name="num" id="num" value="0">
+                <input name="num" id="num" value="" placeholder="0">
             </div>
         </div>
 
         <div class="row">
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button purple">/</button>
+            <button class="button" onclick="add_numero(7)">7</button>
+            <button class="button" onclick="add_numero(8)">8</button>
+            <button class="button" onclick="add_numero(9)">9</button>
+            <button class="button purple" onclick="add_operador('/')">/</button>
         </div>
 
         <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button blue">*</button>
+            <button class="button" onclick="add_numero(4)">4</button>
+            <button class="button" onclick="add_numero(5)">5</button>
+            <button class="button" onclick="add_numero(6)">6</button>
+            <button class="button blue" onclick="add_operador('*')">*</button>
         </div>
 
         <div class="row">
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button red">-</button>
+            <button class="button" onclick="add_numero(1)">1</button>
+            <button class="button" onclick="add_numero(2)">2</button>
+            <button class="button" onclick="add_numero(3)">3</button>
+            <button class="button red" onclick="add_operador('-')">-</button>
         </div>
 
         <div class="row">
-            <button class="button" onclick="clear()">0</button>
-            <button class="button">.</button>
-            <button class="button green">+</button>
-            <button class="button gray">=</button>
+            <button class="button" onclick="add_numero(0)">0</button>
+            <button class="button" onclick="add_numero('.')">.</button>
+            <button class="button green" onclick="add_operador('+')">+</button>
+            <button class="button gray" onclick="total()">=</button>
         </div>
     </div>
 
