@@ -4,62 +4,71 @@ var parar = false;
 
 function limpar() {
   input.value = "";
+  document.querySelector("#history").innerHTML = "";
 }
 
 function add_numero(string) {
   if (!parar) {
     input.value = input.value + string;
+    history.value = input.value;
   } else {
     input.value = "";
     parar = false;
+    document.querySelector("#history").innerHTML = "";
 
     input.value = input.value + string;
   }
 }
 
 function add_operador(op) {
+  if (input.value == "") {
+    input.value = "0";
+  }
+
   operador = op;
   input.value = input.value + op;
 }
 
 function total() {
-  numeros = input.value.split(operador);
+  if (!parar) {
+    numeros = input.value.split(operador);
 
-  switch (operador) {
-    case "+":
-      input.value = Number(numeros[0]) + Number(numeros[1]);
-      break;
+    document.querySelector("#history").innerHTML = input.value;
 
-    case "-":
-      input.value = numeros[0] - numeros[1];
-      break;
+    switch (operador) {
+      case "+":
+        input.value = Number(numeros[0]) + Number(numeros[1]);
+        break;
 
-    case "*":
-      input.value = numeros[0] * numeros[1];
-      break;
+      case "-":
+        input.value = numeros[0] - numeros[1];
+        break;
 
-    case "/":
-      input.value = numeros[0] / numeros[1];
-      break;
+      case "*":
+        input.value = numeros[0] * numeros[1];
+        break;
+
+      case "/":
+        input.value = numeros[0] / numeros[1];
+        break;
+    }
+
+    parar = true;
   }
-
-  parar = true;
 }
 
 function tecla() {
   press = event.keyCode;
 
-  switch (press) {
-    case 8:
-      alert("delete");
-      break;
+  console.log(press);
 
+  switch (press) {
     case 13:
       total();
       break;
 
     case 42:
-      add_numero("*");
+      add_operador("*");
       break;
 
     case 43:
@@ -71,7 +80,7 @@ function tecla() {
       break;
 
     case 45:
-      add_numero("-");
+      add_operador("-");
       break;
 
     case 46:
@@ -79,7 +88,7 @@ function tecla() {
       break;
 
     case 47:
-      add_numero("/");
+      add_operador("/");
       break;
 
     case 48:

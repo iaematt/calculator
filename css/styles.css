@@ -15,7 +15,7 @@ button {
 body {
   color: #111111;
   font-size: 16px;
-  background-color: #cfcfcf;
+  background: url(/img/background.png) #cfcfcf;
 
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ body {
   background-color: #2f2b39;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
-  width: 270px;
+  width: 240px;
 }
 
 .display {
@@ -56,6 +56,7 @@ body {
   font-weight: 500;
   font-size: 15px;
   color: #6d53d6;
+  height: 18px;
 }
 
 .close {
@@ -77,10 +78,9 @@ body {
   width: 50px;
   height: 50px;
   background-color: transparent;
-  border: none ;
-  border-radius: 2px;
+  border: none;
   margin: 2px;
-  opacity: 0.8;
+  border-radius: 2px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 500;
@@ -89,9 +89,10 @@ body {
 }
 
 .button:hover {
-  opacity: 1;
+  transform: scale(1.03);
 }
 .button:active {
+  transform: scale(0.98);
 }
 
 .rounded {
