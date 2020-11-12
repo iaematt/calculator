@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <link rel="icon" href="/img/favicon.ico"/>
+    <title>Calculadora</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -13,41 +14,43 @@
 <body>
     <div class="calculator">
         <div class="display">
-            <div class="close">
-                <img src="img/close.svg" width="15" onclick="limpar()" />
-            </div>
+            <input name="num" id="num" value="" placeholder="0" disabled>
+            <h2>10*99</h2>
+        </div>
 
-            <div class="text">
-                <input name="num" id="num" value="" placeholder="0">
-            </div>
+        <div class="row">
+            <button class="button purple-text" onclick="limpar()">AC</button>
+            <div></div>
+            <div></div>
+            <button class="button  gray" onclick="add_operador('/')">/</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(7)">7</button>
             <button class="button" onclick="add_numero(8)">8</button>
             <button class="button" onclick="add_numero(9)">9</button>
-            <button class="button purple" onclick="add_operador('/')">/</button>
+            <button class="button  gray" onclick="add_operador('*')">*</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(4)">4</button>
             <button class="button" onclick="add_numero(5)">5</button>
             <button class="button" onclick="add_numero(6)">6</button>
-            <button class="button blue" onclick="add_operador('*')">*</button>
+            <button class="button  gray" onclick="add_operador('-')">-</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(1)">1</button>
             <button class="button" onclick="add_numero(2)">2</button>
             <button class="button" onclick="add_numero(3)">3</button>
-            <button class="button red" onclick="add_operador('-')">-</button>
+            <button class="button  gray" onclick="add_operador('+')">+</button>
         </div>
 
         <div class="row">
+            <div></div>
             <button class="button" onclick="add_numero(0)">0</button>
             <button class="button" onclick="add_numero('.')">.</button>
-            <button class="button green" onclick="add_operador('+')">+</button>
-            <button class="button gray" onclick="total()">=</button>
+            <button class="button  purple" onclick="total()">=</button>
         </div>
     </div>
 
