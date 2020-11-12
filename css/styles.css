@@ -101,15 +101,6 @@ body {
   font-size: 16px;
 }
 
-.green {
-  background-color: #55efc4;
-}
-.red {
-  background-color: #ff7675;
-}
-.blue {
-  background-color: #74b9ff;
-}
 .gray {
   background-color: #bfbfc1;
   color: #2f2d38;
@@ -121,4 +112,19 @@ body {
 
 .purple-text {
   color: #7d5dfe;
+}
+
+.github {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.github a {
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+}
+
+.github a:hover {
+  opacity: 1;
 }
