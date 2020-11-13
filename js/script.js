@@ -33,6 +33,11 @@ function total() {
   if (!parar) {
     numeros = input.value.split(operador);
 
+    if(numeros[1] == "") {
+      input.value = input.value + 0
+      numeros[1] = 0
+    }
+
     document.querySelector("#history").innerHTML = input.value;
 
     switch (operador) {
