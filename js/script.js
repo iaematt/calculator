@@ -1,5 +1,5 @@
 var input = document.querySelector("#display");
-var operador;
+var operador = "";
 var parar = false;
 
 function limpar() {
@@ -18,6 +18,7 @@ function add_numero(string) {
       input.value = "";
       parar = false;
       document.querySelector("#history").innerHTML = "";
+      operador = "";
 
       input.value = input.value + string;
     }
@@ -29,8 +30,15 @@ function add_operador(op) {
     input.value = "0";
   }
 
-  operador = op;
-  input.value = input.value + op;
+  if (operador == "") {
+    operador = op;
+    input.value = input.value + op;
+  } else {
+    total()
+    input.value = input.value + op;
+    operador = op;
+    parar=false;
+  }
 }
 
 function total() {
