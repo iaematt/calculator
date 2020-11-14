@@ -1,14 +1,30 @@
 var display = document.querySelector("#display");
-var historyDisplay = document.querySelector("#history");
+var history_display = document.querySelector("#history");
 var operator = "";
 
 // FUNCTION CLEAR DISPLAY
-function clearDisplay() {
+function clear_display() {
   display.value = "";
-  historyDisplay.innerText = "";
+  history_display.innerText = "";
   operator.value = "";
 }
 
-function addNumber(value) {
-  console.log("Add: " + value);
+function add_number(value) {
+  if (value === '.' && display.value.indexOf(".") === -1 || value !== '.') {
+    display.value = display.value + value
+  }
 }
+
+function add_operator(value) {
+  if(display.value === "" && operator === ""){
+    display.value = 0 + value
+  } else {
+    if(operator !== "") {
+      console.log('resolver')
+    } else {
+      display.value = display.value + value
+    }
+  }
+}
+
+function equal_calc() {}

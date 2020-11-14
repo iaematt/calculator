@@ -31,6 +31,7 @@
 </head>
 
 <body>
+
     <!-- CALCULATOR -->
     <div class="calculator">
 
@@ -42,37 +43,37 @@
 
         <!-- <BUTTONS -->
         <div class="row">
-            <button class="button purple-text" onclick="clearDisplay()">AC</button>
+            <button class="button purple-text" onclick="limpar()">AC</button>
             <div></div>
             <div></div>
             <button class="button  gray" onclick="add_operador('/')">/</button>
         </div>
 
         <div class="row">
-            <button class="button" onclick="addNumber(7)">7</button>
-            <button class="button" onclick="addNumber(8)">8</button>
-            <button class="button" onclick="addNumber(9)">9</button>
+            <button class="button" onclick="add_numero(7)">7</button>
+            <button class="button" onclick="add_numero(8)">8</button>
+            <button class="button" onclick="add_numero(9)">9</button>
             <button class="button  gray" onclick="add_operador('*')">*</button>
         </div>
 
         <div class="row">
-            <button class="button" onclick="addNumber(4)">4</button>
-            <button class="button" onclick="addNumber(5)">5</button>
-            <button class="button" onclick="addNumber(6)">6</button>
+            <button class="button" onclick="add_numero(4)">4</button>
+            <button class="button" onclick="add_numero(5)">5</button>
+            <button class="button" onclick="add_numero(6)">6</button>
             <button class="button  gray" onclick="add_operador('-')">-</button>
         </div>
 
         <div class="row">
-            <button class="button" onclick="addNumber(1)">1</button>
-            <button class="button" onclick="addNumber(2)">2</button>
-            <button class="button" onclick="addNumber(3)">3</button>
+            <button class="button" onclick="add_numero(1)">1</button>
+            <button class="button" onclick="add_numero(2)">2</button>
+            <button class="button" onclick="add_numero(3)">3</button>
             <button class="button  gray" onclick="add_operador('+')">+</button>
         </div>
 
         <div class="row">
             <div></div>
-            <button class="button" onclick="addNumber(0)">0</button>
-            <button class="button" onclick="addNumber('.')">.</button>
+            <button class="button" onclick="add_numero(0)">0</button>
+            <button class="button" onclick="add_numero('.')">.</button>
             <button class="button  purple" onclick="total()">=</button>
         </div>
         <!-- BUTTONS/> -->
@@ -87,7 +88,7 @@
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="/js/script.js"></script>
-    <!-- <script type="text/javascript" src="/js/app.js"></script> -->
+    <script type="text/javascript" src="/js/keyboard.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-var input = document.querySelector("#num");
+var input = document.querySelector("#display");
 var operador;
 var parar = false;
 
@@ -9,14 +9,18 @@ function limpar() {
 
 function add_numero(string) {
   if (!parar) {
-    input.value = input.value + string;
-    history.value = input.value;
+    if (string === '.' && input.value.indexOf(".") === -1 || string !== '.') {
+      input.value = input.value + string;
+      history.value = input.value;
+    }
   } else {
-    input.value = "";
-    parar = false;
-    document.querySelector("#history").innerHTML = "";
+    if (string === '.' && input.value.indexOf(".") === -1 || string !== '.') {
+      input.value = "";
+      parar = false;
+      document.querySelector("#history").innerHTML = "";
 
-    input.value = input.value + string;
+      input.value = input.value + string;
+    }
   }
 }
 

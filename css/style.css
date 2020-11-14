@@ -31,7 +31,7 @@ body {
 
 /* CALCULATOR CONTAINER */
 .calculator {
-  animation: sideIn 300ms cubic-bezier(0.42, 0, 0.21, 1);
+  animation: sideIn 480ms cubic-bezier(0.42, 0, 0.21, 1);
   background-color: #2f2b39;
   border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -134,13 +134,12 @@ body {
 /* ANIMATION */
 @keyframes sideIn {
   from {
-    transform: translateY(-60px);
+    transform: translateY(-150px);
     opacity: 0;
   }
 
   50% {
-    transform: translateY(-30px);
-    opacity: 0.5;
+    transform: translateY(-75px);
   }
 
   to {
